@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_salesmanBackground"
+            android:background="@color/teal_200"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:src="@drawable/baner"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:id="@+id/layout_salesmanDetail"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_below="@+id/img_salesmanBackground"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-40dp"
+
+            android:background="#A39E9D"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_salesmanDetailName"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Tên cửa hàng"/>
+            <TextView
+                android:id="@+id/txt_salesmanDetailAddress"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Địa chỉ cửa hàng"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_listSalesmanDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_salesmanDetail"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

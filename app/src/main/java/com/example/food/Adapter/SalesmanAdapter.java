@@ -2,6 +2,7 @@ package com.example.food.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +13,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food.Activity.SalesmanDetailActivity;
 import com.example.food.Model.SalesmanModel;
 import com.example.food.R;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class SalesmanAdapter extends RecyclerView.Adapter<SalesmanAdapter.SalesmanViewHolder> {
@@ -53,7 +56,9 @@ public class SalesmanAdapter extends RecyclerView.Adapter<SalesmanAdapter.Salesm
         holder.layout_itemSalesmanLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, SalesmanDetailActivity.class);
+                intent.putExtra("obj_salesman", item);
+                mContext.startActivity(intent);
             }
         });
     }

@@ -1,6 +1,8 @@
 package com.example.food.Model;
 
-public class SalesmanModel {
+import java.io.Serializable;
+
+public class SalesmanModel implements Serializable {
     private Integer id_salesman;
     private String username;
     private String password;
