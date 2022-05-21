@@ -3,7 +3,6 @@ package com.example.food.Util.DBLocal;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.pvanjewelsdiamond.Model.Account;
 
 public class PVANSharedPreferences {
     private final String KEY = "MY_DATA";
@@ -19,11 +18,11 @@ public class PVANSharedPreferences {
         editor.apply();
     }
 
-    public String getListCart(String key){
-        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
-
-        return sharedPreferences.getString(key,"");
-    }
+//    public String getListCart(String key){
+//        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+//
+//        return sharedPreferences.getString(key,"");
+//    }
     public void putIDCategory(String key, int value){
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -36,17 +35,17 @@ public class PVANSharedPreferences {
         return sharedPreferences.getInt(key,0);
     }
 
-    public void putAccount(String key, String value){
-        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(key, value);
-        editor.apply();
-    }
-    public String getAccount(String key){
-        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
-
-        return sharedPreferences.getString(key,"");
-    }
+//    public void putAccount(String key, String value){
+//        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        editor.putString(key, value);
+//        editor.apply();
+//    }
+//    public String getAccount(String key){
+//        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+//
+//        return sharedPreferences.getString(key,"");
+//    }
 
     public void putStatus(String key, boolean value){
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
