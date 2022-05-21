@@ -36,8 +36,6 @@ public class FindActivity extends AppCompatActivity {
 
         // gán adapter lên rcv
         rcv_findListFood.setAdapter(adapter);
-
-
     }
 
     private void mapping() {
