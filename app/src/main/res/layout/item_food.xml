@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="80dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="6"
+            android:paddingLeft="5dp"
+            android:layout_width="0dp"
+            android:gravity="center|top"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Tên món ắn"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/txt_itemFoodName"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:text="Giá món ăn"
+                android:id="@+id/txt_itemFoodPrice"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:id="@+id/img_itemFoodImage"
+            android:layout_height="match_parent"
+            android:src="@drawable/baner"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
