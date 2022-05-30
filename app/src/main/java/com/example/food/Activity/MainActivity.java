@@ -13,7 +13,7 @@ import com.example.food.Adapter.CategoryAdapter;
 import com.example.food.Adapter.ProgramTypeAdapter;
 import com.example.food.Model.CategoryModel;
 import com.example.food.Model.ProgramTypeModel;
-import com.example.food.Model.SalesmanModel;
+import com.example.food.Model.SalerModel;
 import com.example.food.R;
 
 import java.util.ArrayList;
@@ -39,14 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void getProgramData() {
         mListProgramType = new ArrayList<>();
-        List<SalesmanModel> mListSalesman = new ArrayList<>();
-        SalesmanModel tmp = new SalesmanModel(
+        List<SalerModel> mListSalesman = new ArrayList<>();
+        SalerModel tmp = new SalerModel(
                 1,
                 "admin",
                 "123",
                 "https://png.pngtree.com/png-clipart/20210701/ourmid/pngtree-pho-vietnam-food-travel-png-image_3546494.jpg",
                 336516906,
-                "Nguyễn Văn A",
                 "Say Coffee",
                 "D2, Nguyễn Gia Trí"
         );

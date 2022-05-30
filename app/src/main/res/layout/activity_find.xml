@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.FindActivity">
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_findList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rcv_findListFood"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

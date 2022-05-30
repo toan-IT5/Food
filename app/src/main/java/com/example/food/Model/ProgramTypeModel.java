@@ -5,9 +5,9 @@ import java.util.List;
 public class ProgramTypeModel {
     private Integer id_program;
     private String program_name;
-    private List<SalesmanModel> ListSales;
+    private List<SalerModel> ListSales;
 
-    public ProgramTypeModel(Integer id_program, String program_name, List<SalesmanModel> listSales) {
+    public ProgramTypeModel(Integer id_program, String program_name, List<SalerModel> listSales) {
         this.id_program = id_program;
         this.program_name = program_name;
         ListSales = listSales;
@@ -32,11 +32,11 @@ public class ProgramTypeModel {
         this.program_name = program_name;
     }
 
-    public List<SalesmanModel> getListSales() {
+    public List<SalerModel> getListSales() {
         return ListSales;
     }
 
-    public void setListSales(List<SalesmanModel> listSales) {
+    public void setListSales(List<SalerModel> listSales) {
         ListSales = listSales;
     }
 }

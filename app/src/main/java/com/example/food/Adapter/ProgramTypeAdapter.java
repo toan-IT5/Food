@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.food.Model.ProgramTypeModel;
-import com.example.food.Model.SalesmanModel;
 import com.example.food.R;
 
 import java.util.List;

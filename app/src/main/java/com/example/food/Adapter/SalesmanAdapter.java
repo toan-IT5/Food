@@ -14,22 +14,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.food.Activity.SalesmanDetailActivity;
-import com.example.food.Model.SalesmanModel;
+import com.example.food.Model.SalerModel;
 import com.example.food.R;
 import com.squareup.picasso.Picasso;
 
-import java.io.Serializable;
 import java.util.List;
 
 public class SalesmanAdapter extends RecyclerView.Adapter<SalesmanAdapter.SalesmanViewHolder> {
-    private List<SalesmanModel> mListSalesman;
+    private List<SalerModel> mListSalesman;
     private final Context mContext;
 
     public SalesmanAdapter(Context mContext) {
         this.mContext = mContext;
     }
     @SuppressLint("NotifyDataSetChanged")
-    public void setData(List<SalesmanModel> list){
+    public void setData(List<SalerModel> list){
         this.mListSalesman = list;
         notifyDataSetChanged();
     }
@@ -43,7 +42,7 @@ public class SalesmanAdapter extends RecyclerView.Adapter<SalesmanAdapter.Salesm
 
     @Override
     public void onBindViewHolder(@NonNull SalesmanViewHolder holder, int position) {
-        SalesmanModel item = mListSalesman.get(position);
+        SalerModel item = mListSalesman.get(position);
         if (item == null)
             return;
         // Code sử lý ở dây

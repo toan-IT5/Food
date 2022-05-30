@@ -2,6 +2,7 @@ package com.example.food.Util.DBLocal;
 
 import android.content.Context;
 
+import com.example.food.Model.FoodModel;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonIOException;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataLocalManager {
-    private static String LIST_CART = "mListCart";
+    private static String LIST_FOOD = "mListCart";
     private static String ID_CATEGORY = "id_category";
     private static String ACCOUNT = "account";
     private static String STATUS = "status";
@@ -34,26 +35,26 @@ public class DataLocalManager {
         return instance;
     }
 
-//    public static void putListCart(List<Cart> list){
-//        Gson gson = new Gson();
-//        JsonArray jsonArray = gson.toJsonTree(list).getAsJsonArray();
-//        DataLocalManager.getInstance().preferences.putStringValue(LIST_CART, jsonArray.toString());
-//    }
-//    public static List<Cart> getListCart(){
-//        String tmp = DataLocalManager.getInstance().preferences.getListCart(LIST_CART);
-//        List<Cart> list = new ArrayList<>();
-//        try{
-//            JSONArray jsonArray = new JSONArray(tmp);
-//            Gson gson = new Gson();
-//            for (int i =0; i< jsonArray.length(); i++){
-//                Cart cart = gson.fromJson(jsonArray.getJSONObject(i).toString(), Cart.class);
-//                list.add(cart);
-//            }
-//        }catch (JSONException e){
-//            e.printStackTrace();
-//        }
-//        return list;
-//    }
+    public static void putListFood(List<FoodModel> list){
+        Gson gson = new Gson();
+        JsonArray jsonArray = gson.toJsonTree(list).getAsJsonArray();
+        DataLocalManager.getInstance().preferences.putStringValue(LIST_FOOD, jsonArray.toString());
+    }
+    public static List<FoodModel> getListFood(){
+        String tmp = DataLocalManager.getInstance().preferences.getListFood(LIST_FOOD);
+        List<FoodModel> list = new ArrayList<>();
+        try{
+            JSONArray jsonArray = new JSONArray(tmp);
+            Gson gson = new Gson();
+            for (int i =0; i< jsonArray.length(); i++){
+                FoodModel food = gson.fromJson(jsonArray.getJSONObject(i).toString(), FoodModel.class);
+                list.add(food);
+            }
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return list;
+    }
     public static void putIDCategory(int id){
         DataLocalManager.getInstance().preferences.putIDCategory(ID_CATEGORY,id);
     }

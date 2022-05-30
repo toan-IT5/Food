@@ -18,11 +18,7 @@ public class PVANSharedPreferences {
         editor.apply();
     }
 
-//    public String getListCart(String key){
-//        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
-//
-//        return sharedPreferences.getString(key,"");
-//    }
+
     public void putIDCategory(String key, int value){
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -33,6 +29,12 @@ public class PVANSharedPreferences {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
 
         return sharedPreferences.getInt(key,0);
+    }
+
+    public String getListFood(String key){
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+
+        return sharedPreferences.getString(key,"");
     }
 
 //    public void putAccount(String key, String value){

@@ -6,12 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.food.Adapter.FoodAdapter;
 import com.example.food.Model.FoodModel;
-import com.example.food.Model.SalesmanModel;
+import com.example.food.Model.SalerModel;
 import com.example.food.R;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +21,7 @@ public class SalesmanDetailActivity extends AppCompatActivity {
     private ImageView img_salesmanBackground;
     private TextView txt_salesmanDetailName, txt_salesmanDetailAddress;
     private RecyclerView rcv_listSalesmanDetail;
-    private SalesmanModel salesmanModel;
+    private SalerModel salesmanModel;
     private List<FoodModel> mListFood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +51,7 @@ public class SalesmanDetailActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        salesmanModel = (SalesmanModel) getIntent().getSerializableExtra("obj_salesman");
+        salesmanModel = (SalerModel) getIntent().getSerializableExtra("obj_salesman");
 
         mListFood = new ArrayList<>();
         mListFood.add(new FoodModel(1,"Phở",25000,"https://cdn.tgdd.vn/Files/2017/03/18/962092/an-lien-3-bat-pho-voi-cong-thuc-nau-pho-nay-202201261419401397.jpg","Phở được làm từ bò"));

@@ -2,52 +2,34 @@ package com.example.food.Model;
 
 import java.io.Serializable;
 
-public class SalesmanModel implements Serializable {
-    private Integer id_salesman;
+public class SalerModel implements Serializable {
+    private Integer id_saler;
     private String username;
     private String password;
     private String image;
     private Integer phone;
-    private String name;
     private String name_store;
     private String address;
 
-    public SalesmanModel(Integer id_salesman, String username, String password, String image, Integer phone, String name, String name_store, String address) {
-        this.id_salesman = id_salesman;
+    public SalerModel(Integer id_saler, String username, String password, String image, Integer phone, String name_store, String address) {
+        this.id_saler = id_saler;
         this.username = username;
         this.password = password;
         this.image = image;
         this.phone = phone;
-        this.name = name;
         this.name_store = name_store;
         this.address = address;
     }
 
-    public SalesmanModel() {
+    public SalerModel() {
     }
 
-    public String getImage() {
-        return image;
+    public Integer getId_saler() {
+        return id_saler;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public Integer getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Integer phone) {
-        this.phone = phone;
-    }
-
-    public Integer getId_salesman() {
-        return id_salesman;
-    }
-
-    public void setId_salesman(Integer id_salesman) {
-        this.id_salesman = id_salesman;
+    public void setId_saler(Integer id_saler) {
+        this.id_saler = id_saler;
     }
 
     public String getUsername() {
@@ -66,12 +48,20 @@ public class SalesmanModel implements Serializable {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getImage() {
+        return image;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Integer getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Integer phone) {
+        this.phone = phone;
     }
 
     public String getName_store() {

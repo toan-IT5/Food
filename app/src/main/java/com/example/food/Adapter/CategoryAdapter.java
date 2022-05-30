@@ -2,6 +2,7 @@ package com.example.food.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food.Activity.FindActivity;
 import com.example.food.Model.CategoryModel;
 import com.example.food.R;
+import com.example.food.Util.DBLocal.DataLocalManager;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -53,7 +56,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         holder.layout_itemCategory.setOnClickListener(v -> {
             // Chuyển activity ở đây
-
+            Intent intent = new Intent(mContext, FindActivity.class);
+            intent.putExtra("id_category", categoryModel.getIdCategory());
+            mContext.startActivity(intent);
         });
     }
 

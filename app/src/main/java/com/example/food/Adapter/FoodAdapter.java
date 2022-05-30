@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.food.Model.FoodModel;
 import com.example.food.R;
+import com.example.food.Util.DBLocal.DataLocalManager;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -48,8 +50,15 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         Picasso.get().load(item.getImage()).into(holder.img_itemFoodImage);
         holder.txt_itemFoodName.setText(item.getFood_name());
 
-
         holder.txt_itemFoodPrice.setText(String.format("%,d", item.getPrice()) + " đ");
+        holder.layout_itemFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<FoodModel> tmp = DataLocalManager.getListFood();
+                tmp.add(item);
+                DataLocalManager.putListFood(tmp);
+            }
+        });
     }
 
     @Override
@@ -60,6 +69,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     }
 
     public class FoodViewHolder extends RecyclerView.ViewHolder{
+        private LinearLayout layout_itemFood;
         private TextView txt_itemFoodName,txt_itemFoodPrice;
         private ImageView img_itemFoodImage;
 
@@ -68,6 +78,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             txt_itemFoodName = itemView.findViewById(R.id.txt_itemFoodName);
             txt_itemFoodPrice = itemView.findViewById(R.id.txt_itemFoodPrice);
             img_itemFoodImage = itemView.findViewById(R.id.img_itemFoodImage);
+            layout_itemFood = itemView.findViewById(R.id.layout_itemFood);
         }
     }
 }
